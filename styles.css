@@ -1,0 +1,25 @@
+
+body {
+    display: flex;
+    height: 1200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.box {
+    display: flex;
+    height: 1fr;
+    width: 1fr;
+    border-color: black;
+    border-radius: 1px;
+    border: 1px solid;
+}
+
+.content {
+    display: inline-grid;
+    grid-template-columns: repeat(16, 48px);
+    grid-template-rows: repeat(16, 48px);
+    border: 1px solid;
+}
