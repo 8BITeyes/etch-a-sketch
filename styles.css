@@ -17,9 +17,11 @@ body {
     border: 1px solid;
 }
 
-.content {
+.grid {
     display: inline-grid;
-    grid-template-columns: repeat(16, 48px);
-    grid-template-rows: repeat(16, 48px);
+    height: 960px;
+    width: 960px;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
     border: 1px solid;
 }
