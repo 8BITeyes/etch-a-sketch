@@ -8,13 +8,21 @@ body {
     gap: 50px;
 }
 
+.buttoncontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
 .box {
     display: flex;
     height: 1fr;
     width: 1fr;
     border-color: black;
     border-radius: 1px;
-    border: 1px solid;
+    border: 0px solid;
 }
 
 .grid {
@@ -24,4 +32,5 @@ body {
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
     border: 1px solid;
+    border-radius: 5px;
 }
