@@ -29,8 +29,8 @@ body {
     display: inline-grid;
     height: 960px;
     width: 960px;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(35, 1fr);
+    grid-template-rows: repeat(35, 1fr);
     border: 1px solid;
     border-radius: 5px;
 }

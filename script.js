@@ -4,7 +4,7 @@ const buttonContainer = document.querySelector(".buttoncontainer");
 const container = document.querySelector(".container");
 container.classList.add('grid');
 
-let mode = 1;
+let mode = 'boring';
 
 const createDiv = (number) => {
     let totalBoxes = (number * number);
@@ -12,23 +12,28 @@ const createDiv = (number) => {
         const div = document.createElement('div');
         div.classList.add('box');
         container.appendChild(div);
+        //default opacity
+        div.style.opacity = 0.1;
+        let newOpacity = 0.1;
 
         switch (mode) {
-            case (2):
+            case ('color'):
                 div.addEventListener('mouseover', () => {
+                    div.style.opacity = 1;
                     div.style.backgroundColor = color();
                 })
             break;
 
             default:
                 div.addEventListener('mouseover', () => {
+                    newOpacity += 0.1; //adds .1 to variable newOpacity
                     div.style.backgroundColor = "black";
+                    div.style.opacity = newOpacity; //reassigns opacity to newOpacity value
                 })
             break;
         }
     }            
 }
-createDiv(16);
 
 //Button asks user for a number of boxes to change the container to when pressed.
 const squareButton = document.createElement('button');
@@ -61,7 +66,7 @@ buttonContainer.prepend(partyButton);
 partyButton.textContent = "Party Mode";
 
 partyButton.addEventListener('click', () => {
-    mode = 2;
+    mode = 'color';
     newGrid();
 });
 
@@ -71,7 +76,7 @@ buttonContainer.prepend(boringButton);
 boringButton.textContent = "Boring Mode";
 
 boringButton.addEventListener('click', () => {
-    mode = 1;
+    mode = 'boring';
     newGrid();
 });
 
@@ -84,3 +89,6 @@ function color() {
     let bgColor = "rgb(" + x + "," + y + "," + z + ")";
     return bgColor;
 }
+
+//Default grid 35x35
+createDiv(35);
